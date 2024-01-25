@@ -15,7 +15,7 @@ public class ConditionalOperator {
 		/*
 		 * 조건 연산자를 사용하는 방법
 		 * A ? B : C;
-		 * 항목의 조건 ? true면 실행 " false면 실
+		 * 항목의 조건 ? true면 실행 " false면 실행 
 		 */
 		str = num >= 85 ? "상위권입니다." : "상위권에 미치지 못합니다.";
 		
