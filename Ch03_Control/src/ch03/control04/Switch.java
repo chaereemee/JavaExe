@@ -34,7 +34,7 @@ public class Switch {
 			break;
 		case 5: 
 			System.out.println("유산슬 나왔습니다.");
-		default:		// else의 의미 
+		default:	
 			System.out.println("해당 메뉴 번호가 없습니다.");
 			break;
 		}
