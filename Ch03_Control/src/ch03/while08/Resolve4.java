@@ -7,11 +7,8 @@ public class Resolve4 {
 		while(num <= 10) {
 			if(num % 2 == 0) {
 				System.out.print(num + ", ");
-				num++;
 			}
-			else {
-				num++;
-			}
+			num++;
 		}
 	}
 
