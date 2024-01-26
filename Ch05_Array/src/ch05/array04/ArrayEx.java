@@ -1,7 +1,6 @@
 package ch05.array04;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class ArrayEx {
 
