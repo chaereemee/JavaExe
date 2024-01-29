@@ -1,4 +1,4 @@
-package ch05.arrayy05.ch05.sec10;
+package ch05.array05.ch05.sec10;
 
 public class AdvancedForExample {
 
