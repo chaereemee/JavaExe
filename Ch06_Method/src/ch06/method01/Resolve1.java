@@ -3,18 +3,18 @@ package ch06.method01;
 import java.util.Scanner;
 
 public class Resolve1 {
-	public static int MaxNum(int n1, int n2) {
+	public static void MaxNum(int n1, int n2) {
 		int maxNum = n1;
 		if (maxNum < n2)
 			maxNum = n2;
-		return maxNum;
+		System.out.println("큰 값 : " + maxNum);
 	}
 
-	public static int MinNum(int n1, int n2) {
+	public static void MinNum(int n1, int n2) {
 		int minNum = n1;
 		if (minNum > n2)
 			minNum = n2;
-		return minNum;
+		System.out.println("작은 값 : " + minNum);
 	}
 
 	public static void main(String[] args) {
@@ -24,10 +24,9 @@ public class Resolve1 {
 		int num1 = sc.nextInt();
 		int num2 = sc.nextInt();
 
-		int max = MaxNum(num1, num2);
-		int min = MinNum(num1, num2);
-		System.out.println("큰 값 : " + max + ", 작은 값 : " + min);
-
+		MaxNum(num1, num2);
+		MinNum(num1, num2);
+		
 		sc.close();
 	}
 
