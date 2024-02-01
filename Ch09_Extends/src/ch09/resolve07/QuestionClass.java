@@ -101,6 +101,7 @@ public static int getSelectMenu(Scanner sc) {
 
 // 1번 문제에 대한 풀이
 public static void answer1(Scanner sc) {
+	
 	System.out.print("연산하고자 하는 두 값을 입력 >> ");
 	int a = sc.nextInt();
 	int b = sc.nextInt();
@@ -115,30 +116,103 @@ public static void answer1(Scanner sc) {
 	mul.setValue(a, b);
 	div.setValue(a, b);
 	
-	System.out.println("두 값은 더한 값은 " + add.calculate() + "입니다.");
-	System.out.println("두 값은 뺀 값은 " + sub.calculate() + "입니다.");
-	System.out.println("두 값은 곱한 값은 " + mul.calculate() + "입니다.");
-	System.out.println("두 값은 나눈 값은 " + div.calculate() + "입니다.");
+	System.out.println("\n******* 연산 결과 *******");
+	System.out.println("두 값은 더한 값은 " + add.calculate() + " 입니다.");
+	System.out.println("두 값은 뺀 값은 " + sub.calculate() + " 입니다.");
+	System.out.println("두 값은 곱한 값은 " + mul.calculate() + " 입니다.");
+	System.out.println("두 값은 나눈 값은 " + div.calculate() + " 입니다.");
 }
 
 // 2번 문제에 대한 풀이
 public static void answer2(Scanner sc) {
+	System.out.print("밑변과 높이를 입력 >> ");
+	int w = sc.nextInt();
+	int h = sc.nextInt();
+	Triangle tri = new Triangle(w, h);
+	System.out.println("삼각형의 넓이는 " +tri.area() + " 입니다.");
+	
+	System.out.println();
+	
+	System.out.print("변경시킬 밑변과 높이를 입력 >> ");
+	w = sc.nextInt();
+	h = sc.nextInt();
+	tri.setTriangle(w, h);
+	System.out.println("삼각형의 넓이는 " + tri.area() + " 입니다.");
 
 }
 
-// 3번 문제에 대한 풀이
+// 3번 문제에 대한 풀이 : 정적 멤버는 객체를 생성할 필요 없다.
 public static void answer3(Scanner sc) {
-
+	int[] arr1 = new int[3];
+	System.out.print("int 배열 입력(3) >> ");
+	for (int i = 0; i < 3; i++) {
+        arr1[i] = sc.nextInt();
+    }
+	
+    double[] result1 = ArrayUtility.intToDouble(arr1);
+    
+    System.out.print("변환된 double 배열 : ");
+    for (double num : result1) {
+        System.out.print(num + " ");
+    }
+    
+    System.out.println();
+    
+    double[] arr2 = new double[3];
+    System.out.print("double 배열 입력(3) >> ");
+	for (int i = 0; i < 3; i++) {
+        arr2[i] = sc.nextDouble();
+    }
+    
+    int[] result2 = ArrayUtility.doubleToInt(arr2);
+    
+    System.out.print("변환된 int 배열 : ");
+    for (int num : result2) {
+        System.out.print(num + " ");
+    }
 }
 
 // 4번 문제에 대한 풀이
 public static void answer4(Scanner sc) {
-
+	int[] arr1 = {1, 2, 3, 4, 5, 6, 7};
+    int[] arr2 = {4, 5, 6};
+    
+    int[] concatArr = ArrayUtility2.concat(arr1, arr2);
+    System.out.print("s1과 s2를 연결한 새로운 배열 : ");
+    for (int num : concatArr) {
+        System.out.print(num + " ");
+    }
+    
+    System.out.println();
+    
+    /*
+    int[] removeArr = ArrayUtility2.remove(arr1, arr2);
+    System.out.print("s1에서 s2배열의 숫자를 모두 삭제 : ");
+    for (int num : removeArr) {
+        System.out.print(num + " ");
+    }
+    */
 }
 
 // 5번 문제에 대한 풀이
 public static void answer5(Scanner sc) {
-
+	System.out.println("어린이1의 보유 자산 -> 구슬 5개");
+	MarbleGame child1 = new MarbleGame(15);
+	System.out.println("어린이2의 보유 자산 -> 구슬 9개\n");
+	MarbleGame child2 = new MarbleGame(9);
+	
+	System.out.println("1차 놀이에서 어린이1은 어린이2의 구슬 2개를 획득한다.");
+	child1.takeMarble(2);
+	child2.giveMarble(2);
+	
+	System.out.println("2차 놀이에서 어린이2는 어린이1의 구슬 7개를 획득한다.\n");
+	child2.takeMarble(7);
+	child1.giveMarble(7);
+	
+	System.out.print("어린이1의 ");
+	child1.result();
+	System.out.print("어린이2의 ");
+	child2.result();
 }
 
 // 전체의 시작인 main 메서드

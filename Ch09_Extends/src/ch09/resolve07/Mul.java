@@ -4,11 +4,11 @@ public class Mul {
 private int a, b;
 	
 	public void setValue(int _a, int _b) {
-		this.a = _a;
-		this.b = _b;
+		a = _a;
+		b = _b;
 	}
 	
 	public int calculate() {
-		return this.a * this.b;
+		return a * b;
 	}
 }
