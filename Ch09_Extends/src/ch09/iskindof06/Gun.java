@@ -6,13 +6,13 @@ public class Gun {
 	public Gun(int bullet) {
 		this.bullet = bullet;
 	}
-	
 	public void shot() {
 		if(bullet > 0) {
 			System.out.println("BBANG!");
 			bullet--;
-		} else {
+		}else {
 			System.out.println("Chulkuk...");
 		}
+		
 	}
 }
