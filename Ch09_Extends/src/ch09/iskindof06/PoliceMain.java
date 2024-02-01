@@ -11,25 +11,10 @@ package ch09.iskindof06;
  * 2-1) 불필요한 기능을 제공함으로써 잘못된 서비스/오류를 야기할 가능성이 매우 높아진다.
  * 2-2) 상속관계를 가지면 부모의 모든 객체는 자식 개체에 포함되므로 메모리의 낭비를 가져올 수 있다.
  * 
- * 3) 그러므로 Gun - Polic 관계는 포함관계로!
+ * 3) 그러므로 Gun - Police 관계는 포함관계로!
  * 
  */
 
 public class PoliceMain {
-
-	public static void main(String[] args) {
-		ForcePolice fp = new ForcePolice(10, 5);
-		fp.run();
-		fp.fight();
-		fp.shot();
-		fp.putHandCuff();
-		
-		NursePolice np = new NursePolice(10, 5, 3);
-		np.calcTermometer();
-		np.putHandCuff();
-		np.shot();
-		np.shot();
-		np.shot();
-	}
 
 }
