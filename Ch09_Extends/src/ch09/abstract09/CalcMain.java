@@ -23,6 +23,9 @@ public class CalcMain {
 		Scanner sc = new Scanner(System.in);
 		
 		boolean isRun = true;
+		// 자식 객체는 부모의 클래스 변수에 저장할 수 있다.
+		// 객체 지향 언어의 특징
+		// 관리의 편의성(코드를 줄일 수 있다.)
 		while(isRun) {
 			Calc[] calcs = new Calc[] {add, sub, mul, div};
 			System.out.println("[2개의 숫자를 입력 후 연산]");
