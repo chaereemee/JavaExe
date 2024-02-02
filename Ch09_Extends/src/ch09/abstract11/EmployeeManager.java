@@ -1,4 +1,4 @@
-package ch09.abstract10;
+package ch09.abstract11;
 
 import java.util.Scanner;
 
@@ -15,7 +15,10 @@ public class EmployeeManager {
 		System.out.println("2. 임시직");
 		System.out.println("3. 일용직");
 		System.out.println("4. 전체정보보기");
-		System.out.println("5. 종료");
+		System.out.println("5. 정규직 보기");
+		System.out.println("6. 임시직 보기");
+		System.out.println("7. 일용직 보기");
+		System.out.println("8. 종료");
 		System.out.println("번호 입력 >> ");
 		int sel = sc.nextInt();
 		return sel;
@@ -77,6 +80,30 @@ public class EmployeeManager {
 			this.empArr[i].showEmployeeInfo();
 		}
 	}
+	private void viewRegularEmployeeInfo() {
+		for(int i=0;i<this.numOfEmp;i++) {
+			Employee emp = this.empArr[i];
+			if(emp instanceof RegularEmployee) {
+				this.empArr[i].showEmployeeInfo();
+			}
+		}
+	}
+    private void viewTempEmployeeInfo() {
+    	for(int i=0;i<this.numOfEmp;i++) {
+    		Employee emp = this.empArr[i];
+			if(emp instanceof TempEmployee) {
+				this.empArr[i].showEmployeeInfo();
+			}
+		}
+	}
+    private void viewPartTimeEmployeeInfo() {
+    	for(int i=0;i<this.numOfEmp;i++) {
+    		Employee emp = this.empArr[i];
+			if(emp instanceof PartTimeEmployee) {
+				this.empArr[i].showEmployeeInfo();
+			}
+		}
+	}
 	public void run() {
 		boolean isRun = true;
 		while(isRun) {
@@ -96,6 +123,15 @@ public class EmployeeManager {
 			case EmpMenu.ALL_INFO:
 				emp = null;
 				viewAllEmployeeInfo();
+				break;
+			case EmpMenu.REG_INFO:
+				viewRegularEmployeeInfo();
+				break;
+			case EmpMenu.TEMP_INFO:
+				viewTempEmployeeInfo();
+				break;
+			case EmpMenu.PART_INFO:
+				viewPartTimeEmployeeInfo();
 				break;
 			case EmpMenu.EXIT:
 				emp = null;

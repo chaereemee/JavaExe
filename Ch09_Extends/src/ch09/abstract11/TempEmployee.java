@@ -1,4 +1,4 @@
-package ch09.abstract10;
+package ch09.abstract11;
 
 public class TempEmployee extends Employee {
 	
@@ -22,7 +22,7 @@ public class TempEmployee extends Employee {
 		super.showEmployeeInfo();
 		System.out.println("yearSalary : " + yearSalary);
 		System.out.println("hireYear : " + hireYear);
-		System.out.printf("monthPay : %.2f \n" + getMonthPay());
+		System.out.printf("monthPay : %.2f\n", getMonthPay());
 	}
 
 }
