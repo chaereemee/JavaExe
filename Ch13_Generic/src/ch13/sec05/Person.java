@@ -9,8 +9,8 @@ class Worker extends Person {
 class Student extends Person {
 }
 
-class HighStudnet extends Person {
+class HighStudnet extends Student {
 }
 
-class MiddleStudent extends Person {
+class MiddleStudent extends Student {
 }

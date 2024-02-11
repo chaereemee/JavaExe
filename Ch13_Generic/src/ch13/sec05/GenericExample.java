@@ -12,14 +12,14 @@ public class GenericExample {
 		System.out.println();
 		
 		// 학생만 신청 가능
-		Course.registerCourse1(new Applicant<Student>(new Student()));
-		Course.registerCourse1(new Applicant<HighStudnet>(new HighStudnet()));
-		Course.registerCourse1(new Applicant<MiddleStudent>(new MiddleStudent()));
+		Course.registerCourse2(new Applicant<Student>(new Student()));
+		Course.registerCourse2(new Applicant<HighStudnet>(new HighStudnet()));
+		Course.registerCourse2(new Applicant<MiddleStudent>(new MiddleStudent()));
 		System.out.println();
 		
 		// 직장인 및 일반인만 신청 가능
-		Course.registerCourse1(new Applicant<Person>(new Person()));
-		Course.registerCourse1(new Applicant<Worker>(new Worker()));
+		Course.registerCourse3(new Applicant<Person>(new Person()));
+		Course.registerCourse3(new Applicant<Worker>(new Worker()));
 	}
 
 }
